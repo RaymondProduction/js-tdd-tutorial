@@ -11,8 +11,8 @@ PhotoLister = {
     ].join('');
   },
   photoListToHTML: function(photos) {
-    return '<ul>' + photos.map(PhotoLister.photoToListItem).join('') + '</ul>';
-  }
+    return ['<ul>', photos.map(PhotoLister.photoToListItem).join(''), '</ul>'].join('');
+  },
 };
 
 module.exports = PhotoLister;
