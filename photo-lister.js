@@ -7,7 +7,7 @@ PhotoLister = {
       photo.url, '" alt=""/>',
       '<figcaption>',
       photo.title,
-      '</figcaption></figure></li>'
+      '</figcaption></figure></li>',
     ].join('');
   },
   photoListToHTML: function(photos) {
