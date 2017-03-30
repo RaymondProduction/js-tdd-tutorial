@@ -16,7 +16,10 @@ FlickrFetcher = {
     };
   },
   fetchFlickrData: function(apiKey, fetch) {
-    var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + apiKey + '&text=pugs&format=json&nojsoncallback=1';
+    if ((!fetch) && (typeof jQuery !== 'undefined')) {
+      fetch = jQuery.getJSON.bind(jQuery);
+    }
+    var url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + apiKey.toString() + '&text=pugs&format=json&nojsoncallback=1'
     return fetch(url);
   },
   fetchPhotos: function(apiKey, fetch) {
@@ -29,3 +32,4 @@ FlickrFetcher = {
 if ((typeof module !== 'undefined') && (typeof module.exports !== 'undefined')) {
   module.exports = FlickrFetcher;
 }
+
