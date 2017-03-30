@@ -16,5 +16,13 @@ describe('#photoToListItem()', function() {
             expected = '<li><figure><img src="http://loremflickr.com/960/593" alt=""/>'
                      + '<figcaption>This is a test</figcaption></figure></li>';
         expect(PhotoLister.photoToListItem(input)).to.equal(expected);
+
+        input = {
+            title: 'This is another test',
+            url:   'http://loremflickr.com/960/593/puppy'
+        }
+        expected = '<li><figure><img src="http://loremflickr.com/960/593/puppy" alt=""/>'
+                 + '<figcaption>This is another test</figcaption></figure></li>';
+        expect(PhotoLister.photoToListItem(input)).to.equal(expected);
     });
 });

@@ -1,9 +1,10 @@
 var PhotoLister;
 
 PhotoLister = {
-  photoToListItem: function() {
-    return '<li><figure><img src="http://loremflickr.com/960/593" alt=""/>' + '<figcaption>This is a test</figcaption></figure></li>';
-  },
+    photoToListItem: function(photo) {
+        return '<li><figure><img src="' + photo.url + '" alt=""/>'
+               + '<figcaption>' + photo.title + '</figcaption></figure></li>';
+    },
 };
 
 module.exports = PhotoLister;
