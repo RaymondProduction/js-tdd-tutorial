@@ -1,4 +1,3 @@
-// flickr-fetcher-spec.js
 'use strict';
 var FlickrFetcher = require('./flickr-fetcher.js');
 var expect = require('chai').expect;
