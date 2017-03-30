@@ -18,4 +18,6 @@ PhotoLister = {
   },
 };
 
-module.exports = PhotoLister;
+if ((typeof module !== 'undefined') && (typeof module.exports !== 'undefined')) {
+    module.exports = PhotoLister;
+}
